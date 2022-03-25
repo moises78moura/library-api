@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+library.log
+library.log.2022-03-18.0.gz
