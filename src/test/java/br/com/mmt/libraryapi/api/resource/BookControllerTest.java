@@ -4,6 +4,7 @@ import br.com.mmt.libraryapi.api.dto.BookDTO;
 import br.com.mmt.libraryapi.exceptions.BusinessException;
 import br.com.mmt.libraryapi.model.entity.Book;
 import br.com.mmt.libraryapi.service.BookService;
+import br.com.mmt.libraryapi.service.LoanService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
@@ -46,6 +47,9 @@ public class BookControllerTest {
 
     @MockBean
     BookService service;
+
+    @MockBean
+    LoanService loanService;
 
     @Test
     @DisplayName("Deve criar um livro com sucesso!")

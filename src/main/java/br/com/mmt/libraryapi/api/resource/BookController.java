@@ -97,7 +97,8 @@ public class BookController {
     @ApiResponses({
             @ApiResponse(code = 200, message = "Book succesfully updated")
     })
-    public BookDTO update(@PathVariable Long id, BookDTO dto){
+    public BookDTO update(@PathVariable Long id, @RequestBody @Valid BookDTO dto){
+        log.info("Updating book of id: {} ", id);
         return service.getById(id).map(book -> {
             book.setAuthor(dto.getAuthor());
             book.setTitle(dto.getTitle());
